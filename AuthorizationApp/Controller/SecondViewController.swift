@@ -17,4 +17,8 @@ class SecondViewController: UIViewController {
     @IBAction func exitViewController(_ sender: Any) {
         dismiss(animated: true)
     }
+    
+    func printF() {
+        print("F")
+    }
 }
