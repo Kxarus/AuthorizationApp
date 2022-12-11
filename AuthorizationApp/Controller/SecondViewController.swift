@@ -18,7 +18,12 @@ class SecondViewController: UIViewController {
         dismiss(animated: true)
     }
     
+
     func printF() {
         print("F")
+
+    func printA() {
+        print("A")
+
     }
 }
