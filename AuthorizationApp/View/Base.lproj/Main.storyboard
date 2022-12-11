@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="AuthorizationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="DDn-gv-kdh">
+                                <rect key="frame" x="77" y="381" width="236" height="92"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zrw-5d-hte">
+                                        <rect key="frame" x="0.0" y="0.0" width="236" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="i2e-pP-Vgn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="NBB-oz-ncN"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfu-oM-wb3">
+                                        <rect key="frame" x="0.0" y="58" width="236" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="dll-dj-Ega"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="zhe-6Q-bax"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tti-oq-tix">
+                                <rect key="frame" x="163.33333333333334" y="502" width="63.333333333333343" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log in"/>
+                                <connections>
+                                    <action selector="buttonLogIn" destination="BYZ-38-t0r" eventType="touchUpInside" id="kPw-7G-Eyq"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="0jm-dm-io2">
+                                <rect key="frame" x="48.333333333333343" y="549" width="293.66666666666663" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cob-IB-fzM">
+                                        <rect key="frame" x="0.0" y="0.0" width="133.33333333333334" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Забыли логин?"/>
+                                        <connections>
+                                            <action selector="buttonForgotLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICs-A0-eYN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1p-ZJ-dz7">
+                                        <rect key="frame" x="160.33333333333331" y="0.0" width="133.33333333333331" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?"/>
+                                        <connections>
+                                            <action selector="buttonForgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7D-sd-EQY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="0jm-dm-io2" firstAttribute="top" secondItem="Tti-oq-tix" secondAttribute="bottom" constant="16" id="3Dw-6H-Qtl"/>
+                            <constraint firstItem="0jm-dm-io2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8r1-T3-Dnf"/>
+                            <constraint firstItem="Tti-oq-tix" firstAttribute="top" secondItem="DDn-gv-kdh" secondAttribute="bottom" constant="29" id="9Ja-RA-s2l"/>
+                            <constraint firstItem="DDn-gv-kdh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="9OG-rL-CuJ"/>
+                            <constraint firstItem="DDn-gv-kdh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WGY-9I-a2q"/>
+                            <constraint firstItem="Tti-oq-tix" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ba9-pt-bhe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TFLogin" destination="zrw-5d-hte" id="deu-rx-oKx"/>
+                        <outlet property="TFPassword" destination="cfu-oM-wb3" id="MG7-24-Ely"/>
+                        <outlet property="buttonLogin" destination="Cob-IB-fzM" id="UrI-BG-CxS"/>
+                        <outlet property="buttonPassword" destination="P1p-ZJ-dz7" id="iBR-0l-i7B"/>
+                        <segue destination="sGU-FM-KOF" kind="show" identifier="secondVCSegue" id="oPM-19-aor"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ibd-WH-jDP">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="sGU-FM-KOF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hUv-vV-CZK">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjt-Du-9eE">
+                                <rect key="frame" x="161.66666666666666" y="401.66666666666669" width="67" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="YgW-aM-BKM"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Выход"/>
+                                <connections>
+                                    <action selector="exitViewController:" destination="12T-NC-lBX" eventType="touchUpInside" id="ZxC-ZL-0uu"/>
+                                    <segue destination="12T-NC-lBX" kind="unwind" unwindAction="unwindMainScreenFor:" id="4d3-6n-moI"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6gW-c0-rYa">
+                                <rect key="frame" x="58" y="141" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fyu-sg-LLt"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="Cjt-Du-9eE" firstAttribute="centerY" secondItem="Fyu-sg-LLt" secondAttribute="centerY" id="Iqj-5u-jHP"/>
+                            <constraint firstItem="Cjt-Du-9eE" firstAttribute="centerX" secondItem="Fyu-sg-LLt" secondAttribute="centerX" id="Q3i-BX-cTQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pAV-ht-blZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yeb-r7-LAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="12T-NC-lBX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

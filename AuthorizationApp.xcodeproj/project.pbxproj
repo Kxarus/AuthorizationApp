@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		30E58391279D70C100B25519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58390279D70C100B25519 /* AppDelegate.swift */; };
 		30E58393279D70C100B25519 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58392279D70C100B25519 /* SceneDelegate.swift */; };
-		30E58395279D70C100B25519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58394279D70C100B25519 /* ViewController.swift */; };
+		30E58395279D70C100B25519 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58394279D70C100B25519 /* MainViewController.swift */; };
 		30E58398279D70C100B25519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E58396279D70C100B25519 /* Main.storyboard */; };
 		30E5839A279D70C300B25519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30E58399279D70C300B25519 /* Assets.xcassets */; };
 		30E5839D279D70C300B25519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E5839B279D70C300B25519 /* LaunchScreen.storyboard */; };
+		30E583AA279D7EAC00B25519 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E583A9279D7EAC00B25519 /* Authorization.swift */; };
+		30E583AC279F5E7100B25519 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E583AB279F5E7100B25519 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		30E5838D279D70C100B25519 /* AuthorizationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthorizationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E58390279D70C100B25519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E58392279D70C100B25519 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		30E58394279D70C100B25519 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30E58394279D70C100B25519 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		30E58397279D70C100B25519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30E58399279D70C300B25519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30E5839C279D70C300B25519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30E5839E279D70C300B25519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30E583A9279D7EAC00B25519 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		30E583AB279F5E7100B25519 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		30E5838F279D70C100B25519 /* AuthorizationApp */ = {
 			isa = PBXGroup;
 			children = (
-				30E58390279D70C100B25519 /* AppDelegate.swift */,
-				30E58392279D70C100B25519 /* SceneDelegate.swift */,
-				30E58394279D70C100B25519 /* ViewController.swift */,
-				30E58396279D70C100B25519 /* Main.storyboard */,
-				30E58399279D70C300B25519 /* Assets.xcassets */,
-				30E5839B279D70C300B25519 /* LaunchScreen.storyboard */,
-				30E5839E279D70C300B25519 /* Info.plist */,
+				30E583A4279D7C3100B25519 /* Model */,
+				30E583A5279D7C4300B25519 /* View */,
+				30E583A6279D7C5200B25519 /* Controller */,
+				30E583A8279D7C9900B25519 /* Supporting Files */,
+				30E583A7279D7C7600B25519 /* Resourses */,
 			);
 			path = AuthorizationApp;
+			sourceTree = "<group>";
+		};
+		30E583A4279D7C3100B25519 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30E583A9279D7EAC00B25519 /* Authorization.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30E583A5279D7C4300B25519 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30E58396279D70C100B25519 /* Main.storyboard */,
+				30E5839B279D70C300B25519 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30E583A6279D7C5200B25519 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30E58394279D70C100B25519 /* MainViewController.swift */,
+				30E583AB279F5E7100B25519 /* SecondViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		30E583A7279D7C7600B25519 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				30E58399279D70C300B25519 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		30E583A8279D7C9900B25519 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				30E58390279D70C100B25519 /* AppDelegate.swift */,
+				30E58392279D70C100B25519 /* SceneDelegate.swift */,
+				30E5839E279D70C300B25519 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30E58395279D70C100B25519 /* ViewController.swift in Sources */,
+				30E58395279D70C100B25519 /* MainViewController.swift in Sources */,
+				30E583AA279D7EAC00B25519 /* Authorization.swift in Sources */,
 				30E58391279D70C100B25519 /* AppDelegate.swift in Sources */,
+				30E583AC279F5E7100B25519 /* SecondViewController.swift in Sources */,
 				30E58393279D70C100B25519 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +339,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K595A447RT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AuthorizationApp/Info.plist;
+				INFOPLIST_FILE = "/Users/pro/Desktop/ПриложенияIos/AuthorizationApp/AuthorizationApp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K595A447RT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AuthorizationApp/Info.plist;
+				INFOPLIST_FILE = "/Users/pro/Desktop/ПриложенияIos/AuthorizationApp/AuthorizationApp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
