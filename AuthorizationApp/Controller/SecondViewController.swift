@@ -29,4 +29,8 @@ class SecondViewController: UIViewController {
     func printQWER2() {
         print("QWER2")
     }
+    
+    func printQWER3() {
+        print("QWER3")
+    }
 }
